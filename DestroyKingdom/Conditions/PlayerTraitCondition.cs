@@ -6,22 +6,22 @@ public static class PlayerTraitCondition
 {
     public static bool Fearless()
     {
-        return PlayerTraitConditionInternal(Hero.MainHero.GetHeroTraits().Valor);
+        return PlayerTraitConditionInternal(Hero.MainHero.GetTraitLevel(DefaultTraits.Valor));
     }
 
     public static bool Generous()
     {
-        return PlayerTraitConditionInternal(Hero.MainHero.GetHeroTraits().Generosity);
+        return PlayerTraitConditionInternal(Hero.MainHero.GetTraitLevel(DefaultTraits.Generosity));
     }
 
     public static bool Cruel()
     {
-        return PlayerTraitConditionInternal(Hero.MainHero.GetHeroTraits().Mercy, negativeTrait: true);
+        return PlayerTraitConditionInternal(Hero.MainHero.GetTraitLevel(DefaultTraits.Mercy), negativeTrait: true);
     }
 
     public static bool Honorable()
     {
-        return PlayerTraitConditionInternal(Hero.MainHero.GetHeroTraits().Honor);
+        return PlayerTraitConditionInternal(Hero.MainHero.GetTraitLevel(DefaultTraits.Honor));
     }
 
     private static bool PlayerTraitConditionInternal(int traitLevel, bool negativeTrait = false)

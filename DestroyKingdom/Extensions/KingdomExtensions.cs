@@ -18,7 +18,7 @@ public static class KingdomExtensions
 
     public static int KingdomsStrengthRatio(Kingdom kingdom, Kingdom other)
     {
-        var strengthRatio = (int)(kingdom.TotalStrength * 100 / other.TotalStrength);
+        var strengthRatio = (int)(kingdom.CurrentTotalStrength * 100 / other.CurrentTotalStrength);
         return strengthRatio;
     }
 }
